@@ -1,5 +1,9 @@
 import React, { Component} from "react";
 import './StockListItem.css';
+import { browserHistory } from "react-router";
+
+
+
 
 // const StockListItem = (stock, props) => {
 //     function handleClick(e) {
@@ -22,6 +26,7 @@ class StockListItem extends Component {
     }
     handleClick(e) {
         console.log("I am click");
+        browserHistory.push(`/stockDetails?symbol=${this.props.symbol}`);
     }
     render() {
         return (
